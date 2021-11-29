@@ -28,10 +28,10 @@
             <a href="type.html"><i class="fas fa-fish"></i>انواع الاسماك</a>
           </li>
           <li>
-            <a href="#">من نحن</a>
+            <a href="experience.html">تجارب خاصة</a>
           </li>
           <li>
-            <a href="#">اتصل بنا</a>
+            <a href="contact.html">اتصل بنا</a>
           </li>
         </ul>
       </nav>
@@ -169,10 +169,33 @@
         </div>
       </div>
     </div>
+    <button id="top" class="to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <footer>
-        <h4>
-            copyright 2021 saydalbahri.com <i class="fa fa-copyright"></i>
-        </h4>
+      <h4>copyright 2021 saydalbahri.com <i class="fa fa-copyright"></i></h4>
     </footer>
+    <script>
+      const topes = document.querySelector(".to-top");
+
+      window.addEventListener("scroll", totop);
+
+      function totop() {
+        if (window.pageYOffset > 300) {
+          topes.style.visibility = "visible";
+          console.log("yessssssssss!!");
+        } else {
+          console.log("noooooooooo!!");
+          topes.style.visibility = "hidden";
+        }
+      }
+      topes.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
+
